@@ -1,0 +1,10 @@
+@import './components/searchBar/SearchBar';
+
+.SearchPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(263, 80%, 2%);
+}

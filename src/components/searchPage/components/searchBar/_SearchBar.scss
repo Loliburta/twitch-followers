@@ -1,0 +1,14 @@
+.SearchBar {
+  width: 200px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #330c6e;
+  border: none;
+  outline: none;
+  color: hsl(226, 27%, 75%);
+  font-weight: 500;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
