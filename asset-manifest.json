@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/twitch-followers/static/css/main.a617e044.chunk.css",
+    "main.js": "/twitch-followers/static/js/main.6a8875d5.chunk.js",
+    "main.js.map": "/twitch-followers/static/js/main.6a8875d5.chunk.js.map",
+    "runtime-main.js": "/twitch-followers/static/js/runtime-main.ed1c36b2.js",
+    "runtime-main.js.map": "/twitch-followers/static/js/runtime-main.ed1c36b2.js.map",
+    "static/js/2.cc23d6f7.chunk.js": "/twitch-followers/static/js/2.cc23d6f7.chunk.js",
+    "static/js/2.cc23d6f7.chunk.js.map": "/twitch-followers/static/js/2.cc23d6f7.chunk.js.map",
+    "static/js/3.6ea48b9f.chunk.js": "/twitch-followers/static/js/3.6ea48b9f.chunk.js",
+    "static/js/3.6ea48b9f.chunk.js.map": "/twitch-followers/static/js/3.6ea48b9f.chunk.js.map",
+    "index.html": "/twitch-followers/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/twitch-followers/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.cc23d6f7.chunk.js.LICENSE.txt": "/twitch-followers/static/js/2.cc23d6f7.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/twitch-followers/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed1c36b2.js",
+    "static/js/2.cc23d6f7.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.6a8875d5.chunk.js"
+  ]
+}
