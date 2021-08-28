@@ -1,2 +1,8 @@
+@import '../utils/variables.scss';
 @import './profilePage/ProfilePage';
 @import './searchPage/SearchPage';
+
+p {
+  margin: 0px;
+  padding: 0px;
+}

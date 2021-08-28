@@ -9,7 +9,7 @@ export const SearchBar = () => {
       onChange={(e) => setUserLogin(e.target.value)}
       type='text'
       className='SearchBar'
-      placeholder='Search...'
+      placeholder='Search'
     ></input>
   );
 };

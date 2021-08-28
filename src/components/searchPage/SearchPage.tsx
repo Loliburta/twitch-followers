@@ -23,9 +23,11 @@ export const SearchPage = () => {
   };
   return (
     <div className='SearchPage'>
-      <form onSubmit={onSubmit}>
-        <Icon icon='logos:twitch' />
-        <span>Search for twitch user</span>
+      <form onSubmit={onSubmit} className='searchField'>
+        <Icon icon='logos:twitch' className='searchField__icon' />
+        <div className='searchField__text'>
+          <p>Search for twitch user</p>
+        </div>
         <SearchBar />
       </form>
     </div>
