@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/twitch-followers/static/css/main.7063beb7.chunk.css",
-    "main.js": "/twitch-followers/static/js/main.1e1f8b7b.chunk.js",
-    "main.js.map": "/twitch-followers/static/js/main.1e1f8b7b.chunk.js.map",
+    "main.css": "/twitch-followers/static/css/main.736b65ec.chunk.css",
+    "main.js": "/twitch-followers/static/js/main.41a4c505.chunk.js",
+    "main.js.map": "/twitch-followers/static/js/main.41a4c505.chunk.js.map",
     "runtime-main.js": "/twitch-followers/static/js/runtime-main.64b783a4.js",
     "runtime-main.js.map": "/twitch-followers/static/js/runtime-main.64b783a4.js.map",
-    "static/js/2.53f38fff.chunk.js": "/twitch-followers/static/js/2.53f38fff.chunk.js",
-    "static/js/2.53f38fff.chunk.js.map": "/twitch-followers/static/js/2.53f38fff.chunk.js.map",
+    "static/js/2.843e0575.chunk.js": "/twitch-followers/static/js/2.843e0575.chunk.js",
+    "static/js/2.843e0575.chunk.js.map": "/twitch-followers/static/js/2.843e0575.chunk.js.map",
     "index.html": "/twitch-followers/index.html",
-    "static/css/main.7063beb7.chunk.css.map": "/twitch-followers/static/css/main.7063beb7.chunk.css.map",
-    "static/js/2.53f38fff.chunk.js.LICENSE.txt": "/twitch-followers/static/js/2.53f38fff.chunk.js.LICENSE.txt"
+    "static/css/main.736b65ec.chunk.css.map": "/twitch-followers/static/css/main.736b65ec.chunk.css.map",
+    "static/js/2.843e0575.chunk.js.LICENSE.txt": "/twitch-followers/static/js/2.843e0575.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64b783a4.js",
-    "static/js/2.53f38fff.chunk.js",
-    "static/css/main.7063beb7.chunk.css",
-    "static/js/main.1e1f8b7b.chunk.js"
+    "static/js/2.843e0575.chunk.js",
+    "static/css/main.736b65ec.chunk.css",
+    "static/js/main.41a4c505.chunk.js"
   ]
 }
