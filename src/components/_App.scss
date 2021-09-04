@@ -1,7 +1,8 @@
 @import '../utils/variables.scss';
 @import './profilePage/ProfilePage';
 @import './searchPage/SearchPage';
-
+@import './profilePage/ProfilePage';
+@import './profilePage/components/followedList/FollowedList';
 p {
   margin: 0px;
   padding: 0px;

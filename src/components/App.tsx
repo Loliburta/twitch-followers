@@ -11,8 +11,16 @@ export const App = () => {
       <div>
         <Switch>
           <userLoginContext.Provider value={[userLogin, setUserLogin]}>
-            <Route path={`${process.env.PUBLIC_URL}/`} exact>
+            <Route
+              path={[
+                `${process.env.PUBLIC_URL}/`,
+                `${process.env.PUBLIC_URL}/error/:USER_LOGIN`,
+              ]}
+              exact
+            >
+              {/* <Route path={`${process.env.PUBLIC_URL}/error/:USER_LOGIN`}> */}
               <SearchPage />
+              {/* </Route> */}
             </Route>
             <Route path={`${process.env.PUBLIC_URL}/:USER_LOGIN`}>
               <ProfilePage />

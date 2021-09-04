@@ -1,4 +1,4 @@
-export interface UserObjectType {
+export interface userFollowsType {
   total: number;
   data: follow[];
   pagination: { cursor: string };
