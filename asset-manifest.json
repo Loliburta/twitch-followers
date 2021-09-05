@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/twitch-followers/static/css/main.736b65ec.chunk.css",
-    "main.js": "/twitch-followers/static/js/main.41a4c505.chunk.js",
-    "main.js.map": "/twitch-followers/static/js/main.41a4c505.chunk.js.map",
+    "main.js": "/twitch-followers/static/js/main.1de51649.chunk.js",
+    "main.js.map": "/twitch-followers/static/js/main.1de51649.chunk.js.map",
     "runtime-main.js": "/twitch-followers/static/js/runtime-main.64b783a4.js",
     "runtime-main.js.map": "/twitch-followers/static/js/runtime-main.64b783a4.js.map",
     "static/js/2.843e0575.chunk.js": "/twitch-followers/static/js/2.843e0575.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.64b783a4.js",
     "static/js/2.843e0575.chunk.js",
     "static/css/main.736b65ec.chunk.css",
-    "static/js/main.41a4c505.chunk.js"
+    "static/js/main.1de51649.chunk.js"
   ]
 }
