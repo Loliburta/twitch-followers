@@ -18,11 +18,9 @@ export const App = () => {
               ]}
               exact
             >
-              {/* <Route path={`${process.env.PUBLIC_URL}/error/:USER_LOGIN`}> */}
               <SearchPage />
-              {/* </Route> */}
             </Route>
-            <Route path={`${process.env.PUBLIC_URL}/:USER_LOGIN`}>
+            <Route path={`${process.env.PUBLIC_URL}/:USER_LOGIN`} exact>
               <ProfilePage />
             </Route>
           </userLoginContext.Provider>

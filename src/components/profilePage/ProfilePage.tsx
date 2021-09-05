@@ -15,7 +15,7 @@ export const ProfilePage = () => {
   const [toSearchPage, setToSearchPage] = useState(false);
   const getUserId = async (userLogin: string) => {
     const res = await userId(userLogin);
-    const id = res?.data[0].id;
+    const id = res?.data[0]?.id;
     if (!id) {
       return false;
     }
@@ -36,14 +36,14 @@ export const ProfilePage = () => {
     };
     fetchUserObject();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [USER_LOGIN]);
+  }, []);
 
   if (toSearchPage) {
+    console.log(USER_LOGIN);
     return <Redirect to={`${process.env.PUBLIC_URL}/error/${USER_LOGIN}`} />;
   }
   return (
     <div className='profilePage'>
-      {typeof userObject === 'string' ? '' : ''}
       {userObject?.data && <FollowedList follows={userObject.data} />}
     </div>
   );
