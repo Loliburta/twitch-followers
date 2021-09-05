@@ -15,11 +15,7 @@ export const ProfilePage = () => {
   const [toSearchPage, setToSearchPage] = useState(false);
   const getUserId = async (userLogin: string) => {
     const res = await userId(userLogin);
-    const id = res?.data[0]?.id;
-    if (!id) {
-      return false;
-    }
-    return res?.data[0].id;
+    return res?.data[0]?.id;
   };
   const getUserData = async (userId: string) => {
     const userData = await userFollows(userId);
@@ -28,6 +24,8 @@ export const ProfilePage = () => {
   useEffect(() => {
     const fetchUserObject = async () => {
       const userId = await getUserId(USER_LOGIN);
+      //if userId was not found that means user used link /twitch-followers/nick in browser instead of form
+      //and the twitch user doesn't exist so we redirect him to search page
       if (!userId) {
         setToSearchPage(true);
       } else {
@@ -39,12 +37,13 @@ export const ProfilePage = () => {
   }, []);
 
   if (toSearchPage) {
-    console.log(USER_LOGIN);
     return <Redirect to={`${process.env.PUBLIC_URL}/error/${USER_LOGIN}`} />;
   }
   return (
     <div className='profilePage'>
-      {userObject?.data && <FollowedList follows={userObject.data} />}
+      {userObject && userObject.data && (
+        <FollowedList follows={userObject.data} />
+      )}
     </div>
   );
 };

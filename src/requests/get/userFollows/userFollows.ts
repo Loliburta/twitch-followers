@@ -2,7 +2,7 @@
 import { userFollowsType } from './userFollows.type';
 import { headers } from '../../headers';
 
-let url = 'https://api.twitch.tv/helix/users/follows?first=10&from_id=';
+let url = 'https://api.twitch.tv/helix/users/follows?first=100&from_id=';
 export const userFollows = async (
   userId: string
 ): Promise<userFollowsType | undefined> => {

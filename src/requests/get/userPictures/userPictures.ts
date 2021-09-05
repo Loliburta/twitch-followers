@@ -1,15 +1,14 @@
 //https://dev.twitch.tv/docs/api/reference#get-users
-import { userIdType } from './userId.type';
+import { userPicturesType } from './userPictures.type';
 import { headers } from '../../headers';
 
-let url = 'https://api.twitch.tv/helix/users?login=';
-export const userId = async (
+let url = 'https://api.twitch.tv/helix/users?';
+export const userPictures = async (
   userLogin: string
-): Promise<userIdType | undefined> => {
+): Promise<userPicturesType | undefined> => {
   try {
     const request = await fetch(url + userLogin, { headers: headers });
     const res = await request.json();
-    console.log(res);
     return res;
   } catch (err) {
     console.log(err);
