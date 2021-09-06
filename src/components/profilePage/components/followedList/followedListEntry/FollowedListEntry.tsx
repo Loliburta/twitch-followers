@@ -6,6 +6,16 @@ interface Props {
   to_login: string;
   to_name: string;
   followed_at: Date;
+  id: string;
+  login: string;
+  display_name: string;
+  type: string;
+  broadcaster_type: string;
+  description: string;
+  profile_image_url: string;
+  offline_image_url: string;
+  view_count: number;
+  created_at: Date;
 }
 
 export const FollowedListEntry: React.FC<Props> = ({
@@ -15,14 +25,12 @@ export const FollowedListEntry: React.FC<Props> = ({
   to_id,
   to_name,
   followed_at,
+  view_count,
 }) => {
   return (
-    <div>
-      <p>{from_id}</p>
-      <p>{from_login}</p>
-      <p>{from_name}</p>
-      <p>{to_id}</p>
+    <div className='entry'>
       <p>{to_name}</p>
+      {view_count}
       <p>{followed_at}</p>
     </div>
   );
