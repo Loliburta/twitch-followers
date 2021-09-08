@@ -10,8 +10,7 @@ interface Props {
 type followWithPictures = followType & userInfoType;
 
 export const FollowedList: React.FC<Props> = ({ follows }) => {
-  const [followsWithPictures, setFollowsWithPictures] =
-    useState<followWithPictures[]>();
+  const [followsWithPictures, setFollowsWithPictures] = useState<any>();
   const getFollowsLogins = (follows: followType[]) => {
     return follows
       .map((follow) => `&login=${follow.to_login}`)
@@ -23,22 +22,30 @@ export const FollowedList: React.FC<Props> = ({ follows }) => {
     console.log(res);
     return res;
   };
+  const mergeByLogin = (
+    follows: followType[],
+    usersPictures: userInfoType[]
+  ) => {
+    const merged = follows.map((user) => ({
+      ...usersPictures.find((usr) => {
+        return usr.login === user.to_login && usr;
+      }),
+      ...user,
+    }));
+    return merged;
+  };
   useEffect(() => {
     const getFollowsWithPictures = async () => {
       const followLogins = getFollowsLogins(follows);
       const usersPictures = await getUsersPictures(followLogins);
       if (usersPictures) {
-        setFollowsWithPictures(
-          follows.map((follow: followType, i: number) => {
-            return { ...follow, ...usersPictures.data[i] };
-          })
-        );
+        setFollowsWithPictures(mergeByLogin(follows, usersPictures.data));
       }
     };
     getFollowsWithPictures();
   }, [follows]);
   return (
-    <div>
+    <div className='followedList'>
       {followsWithPictures &&
         followsWithPictures.map((followWithPicture: followWithPictures) => (
           <FollowedListEntry {...followWithPicture} />

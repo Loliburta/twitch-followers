@@ -1,0 +1,7 @@
+.entry {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    width: 20px;
+  }
+}
