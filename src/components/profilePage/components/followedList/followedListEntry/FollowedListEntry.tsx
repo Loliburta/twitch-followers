@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 interface Props {
   from_id: string;
   from_login: string;
@@ -30,16 +31,38 @@ export const FollowedListEntry: React.FC<Props> = ({
   offline_image_url,
   login,
 }) => {
+  const [readableDate, setReadableDate] = useState('');
+  const getReadableDate = (followed_at: string) => {
+    const year = followed_at.slice(0, 4);
+    const month = followed_at.slice(5, 7);
+    const day = followed_at.slice(8, 10);
+    return `${day}.${month}.${year}`;
+  };
+  useEffect(() => {
+    setReadableDate(getReadableDate(followed_at.toString()));
+  }, [followed_at]);
   return (
     <div className='entry'>
-      <p>
-        the login is {login} but to_name is {to_name}
-      </p>
-
-      <p>{to_name}</p>
-      {view_count}
-      <img src={profile_image_url} alt='' className='entry__img' />
-      <p>{followed_at}</p>
+      <a
+        href={`https://www.twitch.tv/${login}`}
+        target='_blank'
+        rel='noreferrer'
+      >
+        <img src={profile_image_url} alt='Profile' className='entry__img' />
+      </a>
+      <div className='entry__info'>
+        <a
+          href={`https://www.twitch.tv/${login}`}
+          target='_blank'
+          rel='noreferrer'
+          className='entry__info__login'
+        >
+          {to_name}
+        </a>
+        <p>{view_count} views</p>
+        <p>followed at</p>
+        <p>{readableDate}</p>
+      </div>
     </div>
   );
 };
