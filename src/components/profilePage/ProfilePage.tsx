@@ -1,15 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { userLoginContext } from '../../utils/userLoginContext';
 import { useParams } from 'react-router-dom';
 import { userFollows } from '../../requests/get/userFollows/userFollows';
 import { userFollowsType } from '../../requests/get/userFollows/userFollows.type';
 import { userId } from '../../requests/get/userId/userId';
 import { FollowedList } from './components/followedList/FollowedList';
 import { Redirect } from 'react-router-dom';
+import { SearchBar } from '../searchPage/components/searchBar/SearchBar';
 
 interface ParamTypes {
   USER_LOGIN: string;
 }
 export const ProfilePage = () => {
+  const [userLogin] = useContext(userLoginContext);
+  const [toProfilePage, setToProfilePage] = useState(false);
+  const [searchMessage, setSearchMessage] = useState('');
   const { USER_LOGIN } = useParams<ParamTypes>();
   const [userObject, setUserObject] = useState<userFollowsType>();
   const [toSearchPage, setToSearchPage] = useState(false);
@@ -20,6 +25,18 @@ export const ProfilePage = () => {
   const getUserData = async (userId: string) => {
     const userData = await userFollows(userId);
     return userData;
+  };
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSearchMessage(`searching for ${userLogin}`);
+    const userId = await getUserId(userLogin);
+    //if userId was not found the message that user was not found pops out, if found redirect to profile page
+    if (!userId) {
+      setSearchMessage(`${userLogin} was not found`);
+    } else {
+      setToProfilePage(true);
+    }
   };
   useEffect(() => {
     const fetchUserObject = async () => {
@@ -39,10 +56,22 @@ export const ProfilePage = () => {
   if (toSearchPage) {
     return <Redirect to={`${process.env.PUBLIC_URL}/error/${USER_LOGIN}`} />;
   }
+  if (toProfilePage) {
+    return <Redirect to={`${process.env.PUBLIC_URL}/${userLogin}`} />;
+  }
   return (
     <div className='profilePage'>
       {userObject && userObject.data && (
-        <FollowedList follows={userObject.data} />
+        <>
+          <form onSubmit={onSubmit} className='searchField'>
+            <div className='searchBarWrapper'>
+              <p className='searchBarWrapper__text'>Search for another user</p>
+              <SearchBar />
+              {searchMessage}
+            </div>
+          </form>
+          <FollowedList follows={userObject.data} />
+        </>
       )}
     </div>
   );

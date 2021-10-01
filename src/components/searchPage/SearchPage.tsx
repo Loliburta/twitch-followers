@@ -43,9 +43,7 @@ export const SearchPage = () => {
     <div className='SearchPage'>
       <form onSubmit={onSubmit} className='searchField'>
         <Icon icon='logos:twitch' className='searchField__icon' />
-        <div className='searchField__text'>
-          <p>Search for a twitch user</p>
-        </div>
+        <div className='searchField__text'>Search for a twitch user</div>
         <SearchBar />
         {searchMessage}
       </form>
