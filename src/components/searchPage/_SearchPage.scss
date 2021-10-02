@@ -24,15 +24,18 @@
       flex-direction: row;
       flex-wrap: wrap;
       text-align: center;
-      font-size: clamp(33px, 7.5vw, 65px);
-      color: $-c-white;
+      font-size: clamp(35px, 7.8vw, 65px);
+      color: hsl(263, 80%, 90%);
       margin-bottom: 50px;
-      font-family: $-ff-ubuntu;
+      font-family: $-ff-roboto;
     }
     &__searchMessage {
-      padding: 5px 0px 0px 0px;
+      padding: 60px 0px 0px 0px;
       min-height: 30px;
-      font-size: clamp(14px, 2.5vw, 21px);
+      font-size: clamp(30px, 4.5vw, 36px);
+      color: hsl(263, 80%, 80%);
+      font-family: $-ff-roboto;
+      font-weight: 500;
     }
   }
 }

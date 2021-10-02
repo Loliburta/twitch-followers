@@ -20,14 +20,17 @@
       flex-wrap: wrap;
       text-align: center;
       font-size: clamp(35px, 7.8vw, 65px);
-      color: $-c-white;
-      margin-bottom: 10px;
-      font-family: $-ff-ubuntu;
+      margin-bottom: 20px;
+      font-family: $-ff-roboto;
+      color: hsl(263, 80%, 95%);
     }
     &__searchMessage {
-      padding: 5px 0px 0px 0px;
+      padding: 60px 0px 0px 0px;
       min-height: 30px;
-      font-size: clamp(14px, 2.5vw, 21px); 
+      font-size: clamp(30px, 4.5vw, 36px);
+      color: hsl(263, 80%, 70%);
+      font-family: $-ff-roboto;
+      font-weight: 500;
     }
   }
 }

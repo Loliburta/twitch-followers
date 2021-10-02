@@ -42,28 +42,31 @@ export const FollowedListEntry: React.FC<Props> = ({
     setReadableDate(getReadableDate(followed_at.toString()));
   }, [followed_at]);
   return (
-    <div className='entry'>
-      <a
-        href={`https://www.twitch.tv/${login}`}
-        target='_blank'
-        rel='noreferrer'
-      >
-        <img src={profile_image_url} alt='Profile' className='entry__img' />
-      </a>
-      <div className='entry__info'>
+    <div className='entryWrapper'>
+      <div className='entry'>
         <a
           href={`https://www.twitch.tv/${login}`}
           target='_blank'
           rel='noreferrer'
-          className='entry__info__login'
         >
-          {to_name}
+          <img src={profile_image_url} alt='Profile' className='entry__img' />
         </a>
-        <p className='entry__info__views'>
-          <span className='entry__info__views__count'>{view_count}</span> views
-        </p>
-        <p>followed at</p>
-        <p>{readableDate}</p>
+        <div className='entry__info'>
+          <a
+            href={`https://www.twitch.tv/${login}`}
+            target='_blank'
+            rel='noreferrer'
+            className='entry__info__login'
+          >
+            {to_name}
+          </a>
+          <p className='entry__info__views'>
+            <span className='entry__info__views__count'>{view_count}</span>{' '}
+            views
+          </p>
+          <p>followed at</p>
+          <p>{readableDate}</p>
+        </div>
       </div>
     </div>
   );
