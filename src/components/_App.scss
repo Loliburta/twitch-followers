@@ -4,6 +4,12 @@
 @import './profilePage/ProfilePage';
 @import './profilePage/components/followedList/FollowedList';
 @import './profilePage/components/followedList/followedListEntry/followedListEntry';
+
+.appWrapper {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: hsl(263, 80%, 2%);
+}
 p {
   margin: 0px;
   padding: 0px;

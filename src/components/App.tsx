@@ -8,7 +8,7 @@ export const App = () => {
   const [userLogin, setUserLogin] = useState('');
   return (
     <Router>
-      <div>
+      <div className='appWrapper'>
         <Switch>
           <userLoginContext.Provider value={[userLogin, setUserLogin]}>
             <Route

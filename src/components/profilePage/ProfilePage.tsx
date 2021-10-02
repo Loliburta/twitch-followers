@@ -13,7 +13,6 @@ interface ParamTypes {
 }
 export const ProfilePage = () => {
   const [userLogin] = useContext(userLoginContext);
-  const [toProfilePage, setToProfilePage] = useState(false);
   const [searchMessage, setSearchMessage] = useState('');
   const { USER_LOGIN } = useParams<ParamTypes>();
   const [userObject, setUserObject] = useState<userFollowsType>();
@@ -27,6 +26,7 @@ export const ProfilePage = () => {
     return userData;
   };
 
+  // After every submit of the form
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSearchMessage(`searching for ${userLogin}`);
@@ -35,9 +35,11 @@ export const ProfilePage = () => {
     if (!userId) {
       setSearchMessage(`${userLogin} was not found`);
     } else {
-      setToProfilePage(true);
+      setUserObject(await getUserData(userId));
     }
   };
+
+  // Only on first redirect
   useEffect(() => {
     const fetchUserObject = async () => {
       const userId = await getUserId(USER_LOGIN);
@@ -54,10 +56,7 @@ export const ProfilePage = () => {
   }, []);
 
   if (toSearchPage) {
-    return <Redirect to={`${process.env.PUBLIC_URL}/error/${USER_LOGIN}`} />;
-  }
-  if (toProfilePage) {
-    return <Redirect to={`${process.env.PUBLIC_URL}/${userLogin}`} />;
+    return <Redirect to={`${process.env.PUBLIC_URL}/error/${userLogin}`} />;
   }
   return (
     <div className='profilePage'>
