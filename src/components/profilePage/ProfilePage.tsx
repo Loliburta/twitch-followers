@@ -36,6 +36,7 @@ export const ProfilePage = () => {
       setSearchMessage(`${userLogin} was not found`);
     } else {
       setUserObject(await getUserData(userId));
+      setSearchMessage(`${userLogin} follows`);
     }
   };
 
@@ -66,7 +67,7 @@ export const ProfilePage = () => {
             <div className='searchBarWrapper'>
               <p className='searchBarWrapper__text'>Search for another user</p>
               <SearchBar />
-              {searchMessage}
+              <p className='searchBarWrapper__searchMessage'>{searchMessage}</p>
             </div>
           </form>
           <FollowedList follows={userObject.data} />
