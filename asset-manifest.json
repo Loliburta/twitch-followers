@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/twitch-followers/static/css/main.1d19ca59.chunk.css",
-    "main.js": "/twitch-followers/static/js/main.c719f689.chunk.js",
-    "main.js.map": "/twitch-followers/static/js/main.c719f689.chunk.js.map",
+    "main.css": "/twitch-followers/static/css/main.eadefb86.chunk.css",
+    "main.js": "/twitch-followers/static/js/main.6329f0f7.chunk.js",
+    "main.js.map": "/twitch-followers/static/js/main.6329f0f7.chunk.js.map",
     "runtime-main.js": "/twitch-followers/static/js/runtime-main.64b783a4.js",
     "runtime-main.js.map": "/twitch-followers/static/js/runtime-main.64b783a4.js.map",
     "static/js/2.a4830177.chunk.js": "/twitch-followers/static/js/2.a4830177.chunk.js",
     "static/js/2.a4830177.chunk.js.map": "/twitch-followers/static/js/2.a4830177.chunk.js.map",
     "index.html": "/twitch-followers/index.html",
-    "static/css/main.1d19ca59.chunk.css.map": "/twitch-followers/static/css/main.1d19ca59.chunk.css.map",
+    "static/css/main.eadefb86.chunk.css.map": "/twitch-followers/static/css/main.eadefb86.chunk.css.map",
     "static/js/2.a4830177.chunk.js.LICENSE.txt": "/twitch-followers/static/js/2.a4830177.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64b783a4.js",
     "static/js/2.a4830177.chunk.js",
-    "static/css/main.1d19ca59.chunk.css",
-    "static/js/main.c719f689.chunk.js"
+    "static/css/main.eadefb86.chunk.css",
+    "static/js/main.6329f0f7.chunk.js"
   ]
 }
