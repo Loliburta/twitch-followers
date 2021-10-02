@@ -59,7 +59,9 @@ export const FollowedListEntry: React.FC<Props> = ({
         >
           {to_name}
         </a>
-        <p>{view_count} views</p>
+        <p className='entry__info__views'>
+          <span className='entry__info__views__count'>{view_count}</span> views
+        </p>
         <p>followed at</p>
         <p>{readableDate}</p>
       </div>

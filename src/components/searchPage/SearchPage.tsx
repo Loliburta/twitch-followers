@@ -45,7 +45,7 @@ export const SearchPage = () => {
         <Icon icon='logos:twitch' className='searchField__icon' />
         <div className='searchField__text'>Search for a twitch user</div>
         <SearchBar />
-        {searchMessage}
+        <p className="searchField__searchMessage">{searchMessage}</p>
       </form>
     </div>
   );

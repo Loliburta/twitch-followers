@@ -49,6 +49,7 @@ export const ProfilePage = () => {
       if (!userId) {
         setToSearchPage(true);
       } else {
+        setSearchMessage(`${USER_LOGIN} follows`);
         setUserObject(await getUserData(userId));
       }
     };
